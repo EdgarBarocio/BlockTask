@@ -21,6 +21,7 @@
 		8EEB34A12A72032000FE839D /* StocksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB34A02A72032000FE839D /* StocksCell.swift */; };
 		8EEB34A32A72033600FE839D /* ServiceCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB34A22A72033500FE839D /* ServiceCalls.swift */; };
 		8EEB34A52A72034300FE839D /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB34A42A72034300FE839D /* JSONSerializer.swift */; };
+		8EEB34AA2A72063F00FE839D /* StocksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB34A92A72063F00FE839D /* StocksModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		8EEB34A02A72032000FE839D /* StocksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksCell.swift; sourceTree = "<group>"; };
 		8EEB34A22A72033500FE839D /* ServiceCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCalls.swift; sourceTree = "<group>"; };
 		8EEB34A42A72034300FE839D /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
+		8EEB34A92A72063F00FE839D /* StocksModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StocksModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		8E82E4A52A6C69D300948252 /* Stocks */ = {
 			isa = PBXGroup;
 			children = (
+				8EEB34A82A72063F00FE839D /* Models */,
 				8EEB349A2A7202CD00FE839D /* Helpers */,
 				8EEB34982A7202CD00FE839D /* StocksView */,
 				8E82E4A62A6C69D300948252 /* AppDelegate.swift */,
@@ -156,6 +159,14 @@
 				8EEB34A42A72034300FE839D /* JSONSerializer.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8EEB34A82A72063F00FE839D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8EEB34A92A72063F00FE839D /* StocksModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 				8EEB349B2A7202CD00FE839D /* StocksViewController.swift in Sources */,
 				8EEB349F2A72031200FE839D /* StocksCellViewModel.swift in Sources */,
 				8EEB34A52A72034300FE839D /* JSONSerializer.swift in Sources */,
+				8EEB34AA2A72063F00FE839D /* StocksModel.swift in Sources */,
 				8E82E4A72A6C69D300948252 /* AppDelegate.swift in Sources */,
 				8E82E4A92A6C69D300948252 /* SceneDelegate.swift in Sources */,
 				8EEB349D2A72030200FE839D /* StocksViewModel.swift in Sources */,

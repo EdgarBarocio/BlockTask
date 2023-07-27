@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+class JSONSerializer {
+    func serializeResponse(response: Data) -> [StocksModel.Stocks]? {
+        
+        let decoder = JSONDecoder()
+        
+        do {
+            let decoded = try decoder.decode(StocksModel.self, from: response)
+            return decoded.stocks
+        } catch {
+            print(error)
+            print(error.localizedDescription)
+            return nil
+        }
+    }
+}
