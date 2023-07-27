@@ -9,12 +9,12 @@ import Foundation
 
 struct StocksModel: Codable {
     struct Stocks: Codable {
-        var ticket: String
-        var name: String
-        var currency: String
-        var currentPrice: Int
-        var quantity: Int
-        var timeStamp: Int
+        var ticket: Int?
+        var name: String?
+        var currency: String?
+        var currentPrice: Int?
+        var quantity: Int?
+        var timeStamp: Int?
         
         enum CodingKeys: String, CodingKey {
             case ticket

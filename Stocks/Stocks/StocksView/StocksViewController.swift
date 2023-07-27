@@ -26,6 +26,7 @@ class StocksViewController: UIViewController {
         self.navigationItem.title = "Current Stock Information"
         
         self.viewModel = StocksViewModel(services: ServiceCalls())
+        self.setupCallbacks()
         self.viewModel?.fetchStockInfo()
     }
 }
@@ -76,7 +77,14 @@ private extension StocksViewController {
     }
     
     func buildAlert(_ errorMessage: String) {
-        
+        let alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+        let actionOk = UIAlertAction(title: "Ok",
+            style: .default,
+            handler: nil)
+
+        alertController.addAction(actionOk)
+
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 

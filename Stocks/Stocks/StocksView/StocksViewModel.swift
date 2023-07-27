@@ -25,7 +25,7 @@ class StocksViewModel {
         }
         
         self.showLoading?()
-        services.fetchBookSearch(url: url) { [weak self] data, error  in
+        services.fetchStockInfo(url: url) { [weak self] data, error  in
             guard let self = self else { return }
             self.dismissLoading?()
             if let data = data {
@@ -45,7 +45,7 @@ class StocksViewModel {
         }
         
         self.showLoading?()
-        services.fetchBookSearch(url: url) { [weak self] data, error  in
+        services.fetchStockInfo(url: url) { [weak self] data, error  in
             guard let self = self else { return }
             self.dismissLoading?()
             if let data = data {
@@ -65,7 +65,7 @@ class StocksViewModel {
         }
         
         self.showLoading?()
-        services.fetchBookSearch(url: url) { [weak self] data, error  in
+        services.fetchStockInfo(url: url) { [weak self] data, error  in
             guard let self = self else { return }
             self.dismissLoading?()
             if let data = data {
