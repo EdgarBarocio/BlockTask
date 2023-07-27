@@ -9,7 +9,7 @@ import Foundation
 
 struct NetworkConstants {
     static let portfolioEndpoint = "https://storage.googleapis.com/cash-homework/cash-stocks-api/portfolio.json"
-    static let malformedEndpoint = "https://storage.googleapis.com/cash-homework/cash-stocks-api/portfolio_ malformed.json"
+    static let malformedEndpoint = "https://storage.googleapis.com/cash-homework/cash-stocks-api/portfolio_malformed.json"
     static let emptyEndpoint = "https://storage.googleapis.com/cash-homework/cash-stocks-api/portfolio_empty.json"
 }
 

@@ -67,6 +67,10 @@ private extension StocksViewController {
             guard let self = self else { return }
             
             self.stocksResult = results
+            
+            if self.stocksResult.isEmpty {
+                // Build Empty table alert
+            }
             self.tableView.reloadData()
         }
         
