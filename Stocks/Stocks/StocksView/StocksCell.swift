@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import UIKit
+
+class StocksCell: UITableViewCell {
+    
+    static let identifier = "stocksCell"
+    
+    func configure(_ viewModel: StocksCellViewModel) {
+        
+    }
+}
