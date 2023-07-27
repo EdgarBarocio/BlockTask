@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stocksCell" rowHeight="122" id="noG-9X-c1V">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stocksCell" rowHeight="122" id="noG-9X-c1V" customClass="StocksCell" customModule="Stocks" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="noG-9X-c1V" id="0Qs-GX-74c">
@@ -111,6 +111,14 @@
                                                 <constraint firstItem="3oO-Ak-pH5" firstAttribute="trailing" secondItem="0Qs-GX-74c" secondAttribute="trailingMargin" id="w2g-Ge-fOF"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="currencyLabel" destination="KOM-7G-Cuz" id="LwI-i6-juC"/>
+                                            <outlet property="nameLabel" destination="vYN-oC-q8d" id="Y5Y-qg-M9h"/>
+                                            <outlet property="priceLabel" destination="XTy-Jq-urQ" id="SkH-jF-jTi"/>
+                                            <outlet property="quantityLabel" destination="gva-cX-arR" id="eyU-tS-uXY"/>
+                                            <outlet property="tickerLabel" destination="cGF-P2-cjz" id="2xX-fw-1XY"/>
+                                            <outlet property="timestampLabel" destination="3oO-Ak-pH5" id="PTD-8C-u7t"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

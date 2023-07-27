@@ -9,7 +9,7 @@ import Foundation
 
 struct StocksModel: Codable {
     struct Stocks: Codable {
-        var ticket: Int?
+        var ticker: String?
         var name: String?
         var currency: String?
         var currentPrice: Int?
@@ -17,7 +17,7 @@ struct StocksModel: Codable {
         var timeStamp: Int?
         
         enum CodingKeys: String, CodingKey {
-            case ticket
+            case ticker
             case name
             case currency
             case currentPrice = "current_price_cents"
