@@ -37,3 +37,8 @@ No third party libraries are used.
 ## Potential future work
 Better UI formatting. Currently the cells are Main Text and Detail Text. Maybe not all info is needed at the cell level.
 Navigation. The application is currently build using storyboards and the landing page is embedded in a navigation controller in case Navigation is a future feature
+
+## Total development time
+About 5 hours. Most of the focus was places on Data validation, separation of responsabilities and making the achitecture as close as possible to MVVM.
+I've not had a chance to implement an architecture like MVVM in a while, so extra effort was placed to ensure it was implemented correctly. 
+UI is one of my weak abilities, this is why it's on a simpler level.
