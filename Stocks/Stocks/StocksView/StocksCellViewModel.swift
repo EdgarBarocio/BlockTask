@@ -15,8 +15,8 @@ class StocksCellViewModel {
     var quantityOwned: Int
     var timeStamp: Int
     
-    var priceString: String?
-    var timeStampString: String?
+    var priceString: String = ""
+    var timeStampString: String = ""
     
     init(ticker: String, name: String, currency: String, price: Int, quantityOwned: Int, timeStamp: Int) {
         self.ticker = String(ticker)
