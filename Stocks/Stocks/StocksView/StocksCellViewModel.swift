@@ -15,8 +15,8 @@ class StocksCellViewModel {
     var quantityOwned: Int
     var timeStamp: Int
     
-    private var priceString: String?
-    private var timeStampString: String?
+    var priceString: String?
+    var timeStampString: String?
     
     init(ticker: String, name: String, currency: String, price: Int, quantityOwned: Int, timeStamp: Int) {
         self.ticker = String(ticker)
@@ -35,12 +35,22 @@ class StocksCellViewModel {
     }
     
     private func priceToUSD(_ price: Int) -> String {
-        
-        return ""
+        let myDouble = Double(price) / Double(100)
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.locale = Locale.current
+        let priceString = currencyFormatter.string(from: NSNumber(value: myDouble))
+        return priceString ?? ""
     }
     
     private func timeStampToDate(_ timeStamp: Int) -> String {
-        
-        return ""
+        let date = Date(timeIntervalSince1970: TimeInterval(timeStamp))
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = DateFormatter.Style.medium
+        dateFormatter.dateStyle = DateFormatter.Style.medium
+        dateFormatter.timeZone = .current
+        let localDate = dateFormatter.string(from: date)
+        return localDate
     }
 }

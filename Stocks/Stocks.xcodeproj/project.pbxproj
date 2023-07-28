@@ -22,6 +22,10 @@
 		8EEB34A32A72033600FE839D /* ServiceCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB34A22A72033500FE839D /* ServiceCalls.swift */; };
 		8EEB34A52A72034300FE839D /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB34A42A72034300FE839D /* JSONSerializer.swift */; };
 		8EEB34AA2A72063F00FE839D /* StocksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB34A92A72063F00FE839D /* StocksModel.swift */; };
+		8EEB34AC2A733CB000FE839D /* MockServiceCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB34AB2A733CB000FE839D /* MockServiceCalls.swift */; };
+		8EEB34B02A73424400FE839D /* malformed.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EEB34AD2A73424400FE839D /* malformed.json */; };
+		8EEB34B12A73424400FE839D /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EEB34AE2A73424400FE839D /* empty.json */; };
+		8EEB34B22A73424400FE839D /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EEB34AF2A73424400FE839D /* success.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		8EEB34A22A72033500FE839D /* ServiceCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCalls.swift; sourceTree = "<group>"; };
 		8EEB34A42A72034300FE839D /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
 		8EEB34A92A72063F00FE839D /* StocksModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StocksModel.swift; sourceTree = "<group>"; };
+		8EEB34AB2A733CB000FE839D /* MockServiceCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceCalls.swift; sourceTree = "<group>"; };
+		8EEB34AD2A73424400FE839D /* malformed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = malformed.json; sourceTree = "<group>"; };
+		8EEB34AE2A73424400FE839D /* empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty.json; sourceTree = "<group>"; };
+		8EEB34AF2A73424400FE839D /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +135,11 @@
 		8E82E4BC2A6C69D400948252 /* StocksTests */ = {
 			isa = PBXGroup;
 			children = (
+				8EEB34AE2A73424400FE839D /* empty.json */,
+				8EEB34AD2A73424400FE839D /* malformed.json */,
+				8EEB34AF2A73424400FE839D /* success.json */,
 				8E82E4BD2A6C69D400948252 /* StocksTests.swift */,
+				8EEB34AB2A733CB000FE839D /* MockServiceCalls.swift */,
 			);
 			path = StocksTests;
 			sourceTree = "<group>";
@@ -283,6 +295,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EEB34B02A73424400FE839D /* malformed.json in Resources */,
+				8EEB34B12A73424400FE839D /* empty.json in Resources */,
+				8EEB34B22A73424400FE839D /* success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E82E4BE2A6C69D400948252 /* StocksTests.swift in Sources */,
+				8EEB34AC2A733CB000FE839D /* MockServiceCalls.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,8 +23,8 @@ class StocksCell: UITableViewCell {
         self.tickerLabel?.text = "Ticker: \(viewModel.ticker)"
         self.nameLabel?.text = "Name: " + viewModel.name
         self.currencyLabel?.text = "Currency: " + viewModel.currency
-        self.priceLabel?.text = "Price: \(viewModel.price)"
+        self.priceLabel?.text = "Price: " + (viewModel.priceString ?? "")
         self.quantityLabel?.text = "Owned: \(viewModel.quantityOwned)"
-        self.timestampLabel?.text = "Time Stamp: \(viewModel.timeStamp)"
+        self.timestampLabel?.text = "Time Stamp: " + (viewModel.timeStampString ?? "")
     }
 }
