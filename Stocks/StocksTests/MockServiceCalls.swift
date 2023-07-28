@@ -6,31 +6,25 @@
 //
 
 import Foundation
+@testable import Stocks
 
-class MockServiceCalls {
+enum MockServiceError : Error {
+    
+    case invalidResponse
+}
+
+class MockServiceCalls: ServiceProtocol {
+    
     typealias ServiceResult = (Data?, Error?) -> Void
     
+    var data: Data?
+    var error: Error?
+    
     func fetchStockInfo(url: URL, completion: @escaping ServiceResult) {
-        DispatchQueue.main.async {
-            //completion(data, nil)
-        }
-    }
-
-    func fetchEmptyInfo(url: URL, completion: @escaping ServiceResult) {
-        DispatchQueue.main.async {
-            //completion(data, nil)
-        }
-    }
-    
-    func fetchMalformedInfo(url: URL, completion: @escaping ServiceResult) {
-        DispatchQueue.main.async {
-            //completion(data, nil)
-        }
-    }
-    
-    func fetchError(url: URL, completion: @escaping ServiceResult) {
-        DispatchQueue.main.async {
-            //completion(nil, error)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            completion(self.data, self.error)
         }
     }
 }
