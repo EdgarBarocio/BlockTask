@@ -13,7 +13,11 @@ struct NetworkConstants {
     static let emptyEndpoint = "https://storage.googleapis.com/cash-homework/cash-stocks-api/portfolio_empty.json"
 }
 
-class ServiceCalls {
+protocol ServiceProtocol {
+    func fetchStockInfo(url: URL, completion: @escaping (Data?, Error?) -> Void)
+}
+
+class ServiceCalls: ServiceProtocol {
     
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?

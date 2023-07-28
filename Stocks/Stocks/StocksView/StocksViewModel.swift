@@ -8,14 +8,14 @@
 import Foundation
 
 class StocksViewModel {
-    private var services: ServiceCalls
+    private var services: ServiceProtocol
     
     var showLoading: (() -> Void)?
     var dismissLoading: (() -> Void)?
     var showGenericError: ((String) -> Void)?
     var didGetSearchResults: (([StocksModel.Stocks]) -> Void)?
     
-    init(services: ServiceCalls) {
+    init(services: ServiceProtocol = ServiceCalls()) {
         self.services = services
     }
     
