@@ -39,12 +39,12 @@ extension StocksViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: StocksCell.identifier) as? StocksCell
         
-        let cellViewModel = StocksCellViewModel(ticker: self.stocksResult[indexPath.row].ticker ?? "NA",
-                                                name: self.stocksResult[indexPath.row].name ?? "NA",
-                                                currency: self.stocksResult[indexPath.row].currency ?? "NA",
-                                                price: self.stocksResult[indexPath.row].currentPrice ?? 0,
+        let cellViewModel = StocksCellViewModel(ticker: self.stocksResult[indexPath.row].ticker,
+                                                name: self.stocksResult[indexPath.row].name,
+                                                currency: self.stocksResult[indexPath.row].currency,
+                                                price: self.stocksResult[indexPath.row].currentPrice,
                                                 quantityOwned: self.stocksResult[indexPath.row].quantity ?? 0,
-                                                timeStamp: self.stocksResult[indexPath.row].timeStamp ?? 0)
+                                                timeStamp: self.stocksResult[indexPath.row].timeStamp)
         cell?.configure(cellViewModel)
 
         return cell ?? UITableViewCell()

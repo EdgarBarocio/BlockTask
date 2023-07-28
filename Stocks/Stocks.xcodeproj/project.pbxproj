@@ -25,6 +25,7 @@
 		8EEB34B42A73457C00FE839D /* SerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB34B32A73457C00FE839D /* SerializerTests.swift */; };
 		8EEB34B62A73459100FE839D /* StocksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB34B52A73459100FE839D /* StocksViewModelTests.swift */; };
 		8EEB34B82A7345A000FE839D /* CellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB34B72A7345A000FE839D /* CellViewModelTests.swift */; };
+		8EEB34BA2A734DD800FE839D /* StocksModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB34B92A734DD800FE839D /* StocksModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		8EEB34B32A73457C00FE839D /* SerializerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializerTests.swift; sourceTree = "<group>"; };
 		8EEB34B52A73459100FE839D /* StocksViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewModelTests.swift; sourceTree = "<group>"; };
 		8EEB34B72A7345A000FE839D /* CellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelTests.swift; sourceTree = "<group>"; };
+		8EEB34B92A734DD800FE839D /* StocksModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				8EEB34B32A73457C00FE839D /* SerializerTests.swift */,
 				8EEB34B52A73459100FE839D /* StocksViewModelTests.swift */,
 				8EEB34B72A7345A000FE839D /* CellViewModelTests.swift */,
+				8EEB34B92A734DD800FE839D /* StocksModelTests.swift */,
 			);
 			path = StocksTests;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EEB34B82A7345A000FE839D /* CellViewModelTests.swift in Sources */,
+				8EEB34BA2A734DD800FE839D /* StocksModelTests.swift in Sources */,
 				8EEB34B42A73457C00FE839D /* SerializerTests.swift in Sources */,
 				8EEB34AC2A733CB000FE839D /* MockServiceCalls.swift in Sources */,
 				8EEB34B62A73459100FE839D /* StocksViewModelTests.swift in Sources */,
