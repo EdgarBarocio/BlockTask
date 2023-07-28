@@ -31,6 +31,7 @@ class StocksViewController: UIViewController {
     }
 }
 
+//MARK: - Extension that implements datasource and delegate for the TableView
 extension StocksViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.stocksResult.count
@@ -51,8 +52,17 @@ extension StocksViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+//MARK: - Private extension to setup callbacks and private functions
 private extension StocksViewController {
     
+    /**
+    Function that implements all actions the view takes with the data provided by the view model
+     
+     showLoading: Displays the activity indicator
+     dismissLoading: Hides the activity indicator
+     didGetSearchResults: A successful serialization was received form data, but this can also display the empty results error
+     showGenericError: Builds an error message displayed as the Tableview Background
+     */
     func setupCallbacks() {
         self.viewModel?.showLoading = { [weak self] in
             guard let self = self else { return }
@@ -72,7 +82,9 @@ private extension StocksViewController {
             self.stocksResult = results
             
             if self.stocksResult.isEmpty {
-                // Build Empty table alert
+                self.buildAlert("No Results Available")
+            } else {
+                self.tableView.restore()
             }
             self.tableView.reloadData()
         }
@@ -83,15 +95,40 @@ private extension StocksViewController {
         }
     }
     
+    /**
+    Function that displays the error message sent from empty results, failed response or malformed results as a
+     table view background
+     */
     func buildAlert(_ errorMessage: String) {
-        let alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
-        let actionOk = UIAlertAction(title: "Ok",
-            style: .default,
-            handler: nil)
+        self.tableView.setEmptyMessage(errorMessage)
+    }
+}
 
-        alertController.addAction(actionOk)
+//MARK: - UITableView extension used to handle error messaging
+extension UITableView {
 
-        self.present(alertController, animated: true, completion: nil)
+    /**
+    Function that creates the error message view and sets it as the tableview backgroundView
+     */
+    func setEmptyMessage(_ message: String) {
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+        messageLabel.text = message
+        messageLabel.textColor = .black
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
+        messageLabel.sizeToFit()
+
+        self.backgroundView = messageLabel
+        self.separatorStyle = .none
+    }
+
+    /**
+    Function that removes the background view
+     */
+    func restore() {
+        self.backgroundView = nil
+        self.separatorStyle = .singleLine
     }
 }
 

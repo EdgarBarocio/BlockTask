@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Base model generated with JSON Serializer to hold fetched data.
 struct StocksModel: Codable {
     struct Stocks: Codable {
         var ticker: String

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// Class for the Stocks Cell
 class StocksCell: UITableViewCell {
     
     @IBOutlet weak var tickerLabel: UILabel!
@@ -19,6 +20,12 @@ class StocksCell: UITableViewCell {
     
     static let identifier = "stocksCell"
     
+    /**
+    Function that updates the table view cell with the selected stock info
+     
+     - Parameters:
+        - viewModel: The StocksCellViewModel containing all the info to display.
+     */
     func configure(_ viewModel: StocksCellViewModel) {
         self.tickerLabel?.text = "Ticker: \(viewModel.ticker)"
         self.nameLabel?.text = "Name: " + viewModel.name

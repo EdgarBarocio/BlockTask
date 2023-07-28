@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Class for The StocksCellViewModel, aditional formatting is done here
 class StocksCellViewModel {
     var ticker: String
     var name: String
@@ -29,11 +30,22 @@ class StocksCellViewModel {
         updateValues()
     }
     
+    /**
+    Private function that updates the values of timeStamp and price form Ints to readable info
+     */
     private func updateValues() {
         self.timeStampString = self.timeStampToDate(self.timeStamp)
         self.priceString = self.priceToUSD(self.price)
     }
     
+    /**
+    Function that updates the table view cell with the selected stock info
+     
+     - Parameters:
+        - price: Integer representing the price of the stock in cents
+     - Returns:
+        - String: Formated price in USD
+     */
     private func priceToUSD(_ price: Int) -> String {
         let myDouble = Double(price) / Double(100)
         let currencyFormatter = NumberFormatter()
@@ -44,6 +56,14 @@ class StocksCellViewModel {
         return priceString ?? ""
     }
     
+    /**
+    Function that takes the stock timestamp and converts it to a readable date string
+     
+     - Parameters:
+        - timeStamp: Integer representing UNIX time
+     - Returns:
+        - String: A formatted Date.
+     */
     private func timeStampToDate(_ timeStamp: Int) -> String {
         let date = Date(timeIntervalSince1970: TimeInterval(timeStamp))
         let dateFormatter = DateFormatter()

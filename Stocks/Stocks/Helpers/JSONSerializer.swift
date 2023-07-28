@@ -7,6 +7,13 @@
 
 import Foundation
 
+/**
+Function that reads the service response, serializes it usion JSONDecoder and creates an array of StockModel.Stocks
+ 
+ - Parameters:
+    - response: Data representing the service response
+ - Returns: Optional StocksModel array.
+ */
 class JSONSerializer {
     func serializeResponse(response: Data) -> [StocksModel.Stocks]? {
         
