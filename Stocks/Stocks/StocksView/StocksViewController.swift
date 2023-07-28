@@ -47,13 +47,8 @@ extension StocksViewController: UITableViewDataSource, UITableViewDelegate {
                                                 timeStamp: self.stocksResult[indexPath.row].timeStamp ?? 0)
         cell?.configure(cellViewModel)
 
-        return cell!
+        return cell ?? UITableViewCell()
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("This is a stub")
-    }
-    
 }
 
 private extension StocksViewController {
